@@ -30,7 +30,27 @@ html {
 .mainContainer .sad .feedbackText {
   text-align: center;
   color: #DCE1E5;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.mainContainer .happy {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.mainContainer .happy .emoji {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 8rem;
+  width: 8rem;
+  padding-bottom: 1rem;
+}
+.mainContainer .happy .feedbackText {
+  text-align: center;
+  color: #DCE1E5;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 .mainContainer .change {

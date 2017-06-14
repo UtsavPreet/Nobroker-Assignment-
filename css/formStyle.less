@@ -1,5 +1,6 @@
 @primaryColor: #556375;
 @textColor: #DCE1E5;
+@fontSize: 1.6rem;
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +16,8 @@ html {
     height: 100%;
     background-color: @primaryColor;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
-    .sad{
+    font-size: @fontSize;
+    .sad {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -32,9 +33,12 @@ html {
         .feedbackText {
             text-align: center;
             color: @textColor;
-            font-size: 1.5rem;
+            font-size: @fontSize;
             font-weight: 300;
         }
+    }
+    .happy {
+        .sad;
     }
     .change {
         display: flex;
