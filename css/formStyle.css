@@ -15,7 +15,7 @@ html {
 }
 .mainContainer .sad {
   position: absolute;
-  height: 10rem;
+  height: 20rem;
   width: 100%;
 }
 .mainContainer .sad .emoji {
@@ -54,7 +54,7 @@ html {
 }
 .mainContainer .happy {
   position: absolute;
-  height: 10rem;
+  height: 20rem;
   width: 100%;
 }
 .mainContainer .happy .emoji {
@@ -194,7 +194,7 @@ html {
   position: relative;
   margin-left: 4.4rem;
   color: #909BA7;
-  font-size: 0.98rem;
+  font-size: 1.13rem;
 }
 .mainContainer .submitButton {
   position: absolute;
