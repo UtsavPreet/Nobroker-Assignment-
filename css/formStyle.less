@@ -10,165 +10,179 @@ html {
     font-size: 10px;
 }
 
+//Main Container Starts
 .mainContainer {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: @primaryColor;
     font-family: 'Roboto', sans-serif;
-    font-size: @fontSize;
+    font-size: @fontSize; //Sad Container Starts
     .sad {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        padding-top: 2rem;
+        position: absolute;
+        height: 10rem;
+        width: 100%;
         .emoji {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            height: 8rem;
-            width: 8rem;
-            padding-bottom: 1rem;
+            position: relative;
+            height: 7.2rem;
+            top: 1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 1rem;
         }
         .feedbackText {
+            height: 2.4rem;
+            position: relative;
             text-align: center;
-            color: @textColor;
-            font-size: @fontSize;
+            color: #DCE1E5;
+            font-size: 1.8rem;
             font-weight: 300;
+            line-height: 1.4;
         }
-    }
-    .happy {
-        .sad;
-    }
-    .change {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
         .changeText {
-            padding-top: 1.2rem;
+            position: absolute;
+            height: 5rem;
+            width: 100%;
+            text-align: center;
+            line-height: 5rem;
             font-size: 1.2rem;
-            color: #6C7B8B;
+            color: #95A1AF;
             font-weight: 400;
-            padding-bottom: 1.6rem;
         }
         .emojiChange {
             position: absolute;
-            top: 15.5rem;
-            left: 26.4rem;
-            height: 2rem;
+            margin-left: 0.3rem;
             width: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
         }
-    }
-    .border {
-        position: relative;
-        margin-left: 9rem;
-        width: 27rem;
-        border-top: 0.1rem solid #909BA7;
-        padding-bottom: 0.9rem;
-    }
-    .inputContainer {
-        position: relative;
-        margin-left: -2%;
-        .option {
-            position: absolute;
-            margin-left: 9rem;
-            background-color: @primaryColor;
-            border: 1px solid #F2F4F6;
-            height: 2.5rem;
-            border-radius: 50%;
-            width: 2.5rem;
-        }
-        .optionLabel {
+    } //End of Sad Container
+    //Happy Container Starts
+    .happy {
+        .sad;
+    } //End of Sad Container
+    //Form Container Starts
+    .formContainer {
+        position: absolute;
+        left: 6rem;
+        right: 6rem;
+        top: 20rem;
+        bottom: 12rem;
+        overflow: auto;
+        box-sizing: border-box; //Input Container Starts
+        .inputContainer {
             position: relative;
-            padding-top: 0.6rem;
-            margin-left: 12.8rem;
-            color: #F2F4F6;
-            font-size: 1.4rem;
-            font-weight: 400;
-        }
-        padding-bottom: 1.8rem;
-    }
+            border-top: 0.1rem solid #909BA7;
+            height: 5rem;
+            width: 100%;
+            line-height: 5rem;
+            .option {
+                position: relative;
+                background-color: #556375;
+                float: left;
+                border: 1px solid #F2F4F6;
+                height: 2.5rem;
+                border-radius: 50%;
+                width: 2.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .optionLabel {
+                position: relative;
+                color: #F2F4F6;
+                font-size: 1.6rem;
+                height: 100%;
+                line-height: 5rem;
+                margin-left: 4rem;
+            }
+        } //End of Input Container
+    } //End of Form Container
+    //Text Area Style
     textArea {
-        position: relative;
-        text-align: left;
-        background-color: @primaryColor;
+        position: absolute;
+        background-color: #556375;
         border: 0.1rem solid #9AA5AE;
         border-radius: 4%;
-        margin-left: 8.4rem;
-        height: 15rem;
-        width: 27rem;
+        top: 26rem;
+        bottom: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    } //Placeholder Styling
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #9AA5AE;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
     }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #9AA5AE;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #9AA5AE;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #9AA5AE;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+    }
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #9AA5AE;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+    } //Privacy Container Starts
     .privacy {
-        position: relative;
-        margin-left: 6.8rem;
-        padding-bottom: 1.8rem;
+        position: absolute;
+        height: 4rem;
+        bottom: 7.6rem;
+        left: 5rem;
         .tickmark {
-            margin-right: 0.8rem;
+            position: absolute;
             height: 4rem;
             width: 4rem;
-            float: left;
         }
         .allowText {
             position: relative;
-            padding-top: 0.8rem;
+            margin-left: 4.4rem;
+            margin-top: 1rem;
             font-size: 1.2rem;
             color: #DCE1E5;
             font-weight: 400;
         }
         .privacyText {
-            margin-left: 1rem;
+            position: relative;
+            margin-left: 4.4rem;
             color: #909BA7;
             font-size: 0.98rem;
         }
-    }
+    } //End of Privacy Container
+    //Style of Submit Button
     .submitButton {
-        position: relative;
-        height: 2.8rem;
-        padding-top: 1rem;
-        margin-top: 1.2rem;
-        margin-left: 7.8rem;
-        margin-right: 6.8rem;
-        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 1.8rem;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        left: 6.2rem;
+        right: 6.2rem;
+        border: 0.3rem solid #F2F4F6;
         border-radius: 3%;
-        color: #5D6A7A;
-        font-size: 1.8rem;
         text-align: center;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: #5D6A7A;
+        font-size: 1.6rem;
+        font-weight: 500;
+        background-color: #F2F4F6;
+        text-transform: uppercase;
     }
-}
-
-::-webkit-input-placeholder {
-    /* WebKit, Blink, Edge */
-    color: #9AA5AE;
-    font-size: 1.4rem;
-    font-weight: 400;
-    padding: 1rem;
-}
-
-:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #9AA5AE;
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-
-::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #9AA5AE;
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #9AA5AE;
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #9AA5AE;
-    font-size: 1.4rem;
-    font-weight: 400;
-}
+} //End of Main Container

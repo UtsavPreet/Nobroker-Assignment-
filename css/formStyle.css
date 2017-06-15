@@ -14,168 +14,201 @@ html {
   font-size: 1.6rem;
 }
 .mainContainer .sad {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  padding-top: 2rem;
+  position: absolute;
+  height: 10rem;
+  width: 100%;
 }
 .mainContainer .sad .emoji {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 8rem;
-  width: 8rem;
-  padding-bottom: 1rem;
+  position: relative;
+  height: 7.2rem;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
 }
 .mainContainer .sad .feedbackText {
+  height: 2.4rem;
+  position: relative;
   text-align: center;
   color: #DCE1E5;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
+  line-height: 1.4;
+}
+.mainContainer .sad .changeText {
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 1.2rem;
+  color: #95A1AF;
+  font-weight: 400;
+}
+.mainContainer .sad .emojiChange {
+  position: absolute;
+  margin-left: 0.3rem;
+  width: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .mainContainer .happy {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  padding-top: 2rem;
+  position: absolute;
+  height: 10rem;
+  width: 100%;
 }
 .mainContainer .happy .emoji {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 8rem;
-  width: 8rem;
-  padding-bottom: 1rem;
+  position: relative;
+  height: 7.2rem;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
 }
 .mainContainer .happy .feedbackText {
+  height: 2.4rem;
+  position: relative;
   text-align: center;
   color: #DCE1E5;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
+  line-height: 1.4;
 }
-.mainContainer .change {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
-.mainContainer .change .changeText {
-  padding-top: 1.2rem;
+.mainContainer .happy .changeText {
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
   font-size: 1.2rem;
-  color: #6C7B8B;
+  color: #95A1AF;
   font-weight: 400;
-  padding-bottom: 1.6rem;
 }
-.mainContainer .change .emojiChange {
+.mainContainer .happy .emojiChange {
   position: absolute;
-  top: 15.5rem;
-  left: 26.4rem;
-  height: 2rem;
+  margin-left: 0.3rem;
   width: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.mainContainer .border {
-  position: relative;
-  margin-left: 9rem;
-  width: 27rem;
-  border-top: 0.1rem solid #909BA7;
-  padding-bottom: 0.9rem;
-}
-.mainContainer .inputContainer {
-  position: relative;
-  margin-left: -2%;
-  padding-bottom: 1.8rem;
-}
-.mainContainer .inputContainer .option {
+.mainContainer .formContainer {
   position: absolute;
-  margin-left: 9rem;
+  left: 6rem;
+  right: 6rem;
+  top: 20rem;
+  bottom: 12rem;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.mainContainer .formContainer .inputContainer {
+  position: relative;
+  border-top: 0.1rem solid #909BA7;
+  height: 5rem;
+  width: 100%;
+  line-height: 5rem;
+}
+.mainContainer .formContainer .inputContainer .option {
+  position: relative;
   background-color: #556375;
+  float: left;
   border: 1px solid #F2F4F6;
   height: 2.5rem;
   border-radius: 50%;
   width: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.mainContainer .inputContainer .optionLabel {
+.mainContainer .formContainer .inputContainer .optionLabel {
   position: relative;
-  padding-top: 0.6rem;
-  margin-left: 12.8rem;
   color: #F2F4F6;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  height: 100%;
+  line-height: 5rem;
+  margin-left: 4rem;
 }
 .mainContainer textArea {
-  position: relative;
-  text-align: left;
+  position: absolute;
   background-color: #556375;
   border: 0.1rem solid #9AA5AE;
   border-radius: 4%;
-  margin-left: 8.4rem;
-  height: 15rem;
-  width: 27rem;
+  top: 26rem;
+  bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
-.mainContainer .privacy {
-  position: relative;
-  margin-left: 6.8rem;
-  padding-bottom: 1.8rem;
-}
-.mainContainer .privacy .tickmark {
-  margin-right: 0.8rem;
-  height: 4rem;
-  width: 4rem;
-  float: left;
-}
-.mainContainer .privacy .allowText {
-  position: relative;
-  padding-top: 0.8rem;
-  font-size: 1.2rem;
-  color: #DCE1E5;
-  font-weight: 400;
-}
-.mainContainer .privacy .privacyText {
-  margin-left: 1rem;
-  color: #909BA7;
-  font-size: 0.98rem;
-}
-.mainContainer .submitButton {
-  position: relative;
-  height: 2.8rem;
-  padding-top: 1rem;
-  margin-top: 1.2rem;
-  margin-left: 7.8rem;
-  margin-right: 6.8rem;
-  background-color: #FFFFFF;
-  border-radius: 3%;
-  color: #5D6A7A;
-  font-size: 1.8rem;
-  text-align: center;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-::-webkit-input-placeholder {
+.mainContainer ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #9AA5AE;
   font-size: 1.4rem;
   font-weight: 400;
   padding: 1rem;
 }
-:-moz-placeholder {
+.mainContainer :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #9AA5AE;
   font-size: 1.4rem;
   font-weight: 400;
+  padding: 1rem;
 }
-::-moz-placeholder {
+.mainContainer ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #9AA5AE;
   font-size: 1.4rem;
   font-weight: 400;
+  padding: 1rem;
 }
-:-ms-input-placeholder {
+.mainContainer :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #9AA5AE;
   font-size: 1.4rem;
   font-weight: 400;
+  padding: 1rem;
 }
-::-ms-input-placeholder {
+.mainContainer ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #9AA5AE;
   font-size: 1.4rem;
   font-weight: 400;
+  padding: 1rem;
+}
+.mainContainer .privacy {
+  position: absolute;
+  height: 4rem;
+  bottom: 7.6rem;
+  left: 5rem;
+}
+.mainContainer .privacy .tickmark {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+}
+.mainContainer .privacy .allowText {
+  position: relative;
+  margin-left: 4.4rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #DCE1E5;
+  font-weight: 400;
+}
+.mainContainer .privacy .privacyText {
+  position: relative;
+  margin-left: 4.4rem;
+  color: #909BA7;
+  font-size: 0.98rem;
+}
+.mainContainer .submitButton {
+  position: absolute;
+  bottom: 1.8rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  left: 6.2rem;
+  right: 6.2rem;
+  border: 0.3rem solid #F2F4F6;
+  border-radius: 3%;
+  text-align: center;
+  color: #5D6A7A;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #F2F4F6;
+  text-transform: uppercase;
 }

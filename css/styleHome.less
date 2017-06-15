@@ -7,17 +7,19 @@ html {
     font-size: 10px;
 }
 
+// Main Container Start
 .mainContainer {
     position: absolute;
     height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     .userContainer {
+        //User Container Starts
         position: absolute;
         top: 0rem;
         width: 100%;
         height: 43rem;
-        background-color: #44525E;
+        background-color: #44525E; //userPhoto Division Starts
         .userPhoto {
             position: absolute;
             top: 8.6rem;
@@ -26,7 +28,8 @@ html {
             height: 17rem;
             border-radius: 50%;
             border: 0.8rem solid white;
-        }
+        } //End of userPhoto Division 
+        //userName Division Starts
         .userName {
             position: absolute;
             width: 100%;
@@ -36,8 +39,9 @@ html {
             text-align: center;
             font-size: 5.2rem;
             color: white;
-        }
-    }
+        } //End of User Division
+    } //End of User Container
+    //ZigZag Decoration
     .userContainer:before {
         content: "";
         display: block;
@@ -48,7 +52,7 @@ html {
         background: linear-gradient(white 5%, transparent 0%), linear-gradient(45deg, #44525E 45%, transparent 35%) 0 100%, linear-gradient(-45deg, #44525E 40%, white 33%) 0 45%;
         background-repeat: repeat-x;
         background-size: 0px 100%, 35px 35px, 35px 35px;
-    }
+    } //Arrow Decoration
     .arrow {
         position: absolute;
         top: 39.8rem;
@@ -58,7 +62,7 @@ html {
         border-bottom: 3rem solid #566476;
         left: 50%;
         transform: translateX(-50%);
-    }
+    } // Feedback Container Starts
     .feedbackContainer {
         position: absolute;
         top: 42.9rem;
@@ -93,7 +97,8 @@ html {
                 width: 14rem;
             }
         }
-    }
+    } //End of Feedback Container
+    //Amount Container Starts
     .amountContainer {
         position: absolute;
         top: 77rem;
@@ -108,14 +113,16 @@ html {
             font-size: 9rem;
             font-weight: 400;
         }
-    }
+    } //End of Amount Container
+    //Items Container Starts
     .itemsContainer {
         position: absolute;
         left: 6rem;
         right: 6rem;
         bottom: 0;
+        overflow: auto;
         top: 110rem;
-        border-top: 0.4rem dashed #E6E6E6;
+        border-top: 0.4rem dashed #E6E6E6; //Item Division Starts
         .item {
             padding-top: 2.2rem;
             position: relative;
@@ -149,6 +156,6 @@ html {
                 margin-top: 1rem;
                 font-weight: 300;
             }
-        }
-    }
-}
+        } //End of Item Division
+    } //End of Items Container
+} //End of Main Container
