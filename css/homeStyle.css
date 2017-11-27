@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+.mainContainer .topBar {
+  position: absolute;
+  height: 8rem;
+  background: #0d47a1;
+  width: 100%;
+}
+.mainContainer .topBar .logo {
+  position: relative;
+  float: left;
+  height: 4rem;
+  margin: 2rem;
+}
+.mainContainer .topBar .text {
+  position: relative;
+  float: right;
+  line-height: 4rem;
+  color: white;
+  font-size: 2rem;
+  margin: 2rem;
+}
+.mainContainer .topBar .bell {
+  position: relative;
+  float: right;
+  height: 5rem;
+  margin: 1.5rem;
+  margin-right: 6rem;
+}
+.mainContainer .topBar .count {
+  position: absolute;
+  right: 6.5rem;
+  top: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.2rem;
+}
+.mainContainer .notificationTab {
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  height: 20rem;
+  width: 20rem;
+  border: 0.2rem solid;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: none;
+}
+.mainContainer .notificationTab .header {
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+  text-align: center;
+  line-height: 4rem;
+}
+.mainContainer .notificationTab .header .count {
+  position: absolute;
+  top: 0.8rem;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  background: #0d47a1;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.2rem;
+}
+.mainContainer .notificationTab .notificationContainer {
+  position: absolute;
+  top: 4rem;
+  height: 16rem;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.mainContainer .notificationTab .notificationContainer .notification {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid gold;
+}
+.mainContainer .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.mainContainer .modalContainer {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  height: 20rem;
+  width: 50rem;
+  background: lightgrey;
+  border: 0.1rem solid lightgray;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.mainContainer .modalContainer .modalContent {
+  position: relative;
+  height: 15rem;
+  width: 100%;
+  overflow-y: auto;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: black;
+  line-height: 5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.mainContainer .modalContainer .modalButtonContainer {
+  position: absolute;
+  bottom: 0;
+  height: 5rem;
+  width: 100%;
+  border-top: 0.1rem solid silver;
+}
+.mainContainer .modalContainer .modalButtonContainer .modalButton {
+  position: absolute;
+  left: 50%;
+  font-size: 1.4rem;
+  color: #d1d1d1;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: uppercase;
+  background: black;
+  padding: 1rem 2rem;
+  transform: translateX(-50%);
+}
+.mainContainer .useCaseContainer {
+  position: absolute;
+  top: 8rem;
+  height: 50rem;
+  width: 100%;
+  overflow-y: auto;
+}
+.mainContainer .useCaseContainer .useCase {
+  position: relative;
+  height: 25rem;
+  width: 100%;
+}
+.mainContainer .useCaseContainer .useCase .textBox {
+  position: relative;
+  float: left;
+  margin: 1rem;
+  height: 7rem;
+  width: 25rem;
+  line-height: 3rem;
+  color: black;
+  padding-bottom: 0.1rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.2rem;
+  overflow: none;
+  background: transparent;
+  border: 0.1rem solid #D3D7DC;
+  resize: none;
+  outline: none;
+}
+.mainContainer .useCaseContainer .useCase .instructions {
+  position: absolute;
+  top: 8rem;
+  height: 8rem;
+  margin: 1rem;
+  width: 100%;
+}
+.mainContainer .useCaseContainer .useCase .instructions .instruction {
+  position: relative;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.mainContainer .useCaseContainer .useCase .buttonContainer {
+  position: absolute;
+  bottom: 0;
+  height: 9rem;
+  width: 100%;
+}
+.mainContainer .useCaseContainer .useCase .buttonContainer .button {
+  position: relative;
+  float: left;
+  font-size: 1.4rem;
+  color: #d1d1d1;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: uppercase;
+  background: #0d47a1;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+}
+.mainContainer .footer {
+  position: absolute;
+  height: 8rem;
+  background: #0d47a1;
+  width: 100%;
+  bottom: 0;
+}
+.mainContainer .footer .logo {
+  position: relative;
+  float: left;
+  height: 4rem;
+  margin: 2rem;
+}
+.mainContainer .footer .text {
+  position: relative;
+  float: right;
+  line-height: 4rem;
+  color: white;
+  font-size: 2rem;
+  margin: 2rem;
+}
+.mainContainer .footer .bell {
+  position: relative;
+  float: right;
+  height: 5rem;
+  margin: 1.5rem;
+  margin-right: 6rem;
+}
+.mainContainer .footer .count {
+  position: absolute;
+  right: 6.5rem;
+  top: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.2rem;
+}
