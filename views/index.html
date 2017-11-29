@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <title></title>
     <link rel="stylesheet" href="../css/screen.css">
@@ -11,64 +10,67 @@
 <body>
     <div class="mainContainer">
         <div class="topBar">
-            <img src="http://d9hhrg4mnvzow.cloudfront.net/www.engineer.ai/22f3799e-e-ai-white.png" alt="engineer.ai logo" class="logo">
-            <img src="../images/bell.png" class="bell" alt="" srcset="">
-            <div class="count">
-                12
-            </div>
+            <img src="https://images.nobroker.in/static/img/logos/nb_logo_trans.png" alt="no broker logo" class="logo">
         </div>
-        <div class="notificationTab">
-            <div class="header">
-                New Notifications
-                <div class="count">
-                    
-                </div>
-            </div>
-            <div class="notificationContainer">
-                <div class="notification">
-                    Hi! This is a demo notification
-                </div>
-                <div class="notification">
-                    Hi! This is a demo notification
-                </div>
-                <div class="notification">
-                    Hi! This is a demo notification
-                </div>
-                <div class="notification">
-                        Hi! This is a demo notification
-                    </div>
-                    <div class="notification">
-                            Hi! This is a demo notification
-                        </div>
-            </div>
-        </div>
-
-        <div class="overlay">
-        </div>
+        <div class="overlay"></div>
         <div class="modalContainer">
-            <div class="modalContent">
-            </div>
+            <textarea class="modalContent" placeholder="Enter the text for card"></textarea>
             <div class="modalButtonContainer">
                 <div class="modalButton">
                     Cancel
                 </div>
+                <div class="modalButton contentAdd">
+                        Okay
+                </div>
             </div>
         </div>
-        <div class="useCaseContainer">
-            <div class="useCase">
-                <textarea class="textBox" placeholder="Enter the content that goes inside the popup here..."></textarea>
-                <div class="instructions">
-                    <div class="instruction">
-                        You can add valid html content in this text box to load that in the popup
+        <div class="todoContainer">
+            <div class="column">
+                <div class="heading">
+                    TO_DO
+                </div>
+                <div id="todo" class="cardContainer">
+                    
+                </div>
+                <div class="addCardButton todo">
+                    Add Card
+                </div>
+            </div>
+            <div class="column">
+                <div class="heading">
+                    IN_PROGRESS
+                </div>
+                <div id="progress" class="cardContainer">
+                    <div class="card">
+                       <div class="content">This is a dummy card 1</div>
+                       <img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCard" class="removeCard">
                     </div>
-                    <div class="instruction">
-                        You can add any content that should be loaded inside the popup body
+                    <div class="card">
+                        <div class="content">This is a dummy card 2</div>
+                        <img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCard" class="removeCard">
+                    </div>
+                    <div class="card">
+                        <div class="content">This is a dummy card 3</div>
+                        <img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCard" class="removeCard">
+                    </div>
+                    <div class="card">
+                        <div class="content">This is a dummy card 4</div>
+                        <img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCard" class="removeCard">
                     </div>
                 </div>
-                <div class="buttonContainer">
-                    <div class="button">
-                        Submit
-                    </div>
+                <div class="addCardButton progress">
+                    Add Card
+                </div>
+            </div>
+            <div class="column">
+                <div class="heading">
+                    Done
+                </div>
+                <div id="done" class="cardContainer">
+                    
+                </div>
+                <div class="addCardButton done">
+                    Add Card
                 </div>
             </div>
         </div>
@@ -81,8 +83,7 @@
 </body>
 
 <script type="text/javascript" src="../scripts/jquery.js"></script>
+<script src="//rubaxa.github.io/Sortable/Sortable.js"></script>
 <script type="text/javascript" src="../js/base.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
-
-
 </html>

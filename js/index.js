@@ -1,28 +1,68 @@
 $(document)
     .ready(function () {
-        bind('.mainContainer .useCaseContainer .useCase .buttonContainer .button', () => {
-            let text = $('.mainContainer .useCaseContainer .useCase .textBox')
-                .val()
-                .trim();
-            launchPopup(text);
+        let progress = document.getElementById("progress");
+        Sortable.create(progress, {
+            group: "assignment",
+            filter: '.removeCard',
+            onFilter: (evt) => {
+                let el = evt.item;
+                el && el
+                    .parentNode
+                    .removeChild(el);
+            }
+        });
+        let todo = document.getElementById("todo");
+        Sortable.create(todo, {
+            group: "assignment",
+            filter: '.removeCard',
+            onFilter: (evt) => {
+                let el = evt.item;
+                el && el
+                    .parentNode
+                    .removeChild(el);
+            }
+        });
+        let done = document.getElementById("done");
+        Sortable.create(done, {
+            group: "assignment",
+            filter: '.removeCard',
+            onFilter: (evt) => {
+                let el = evt.item;
+                el && el
+                    .parentNode
+                    .removeChild(el);
+            }
+        });
+        bind('.done', () => {
+            launchPopup();
+        })
+        bind('.progress', () => {
+            let content = launchPopup();
+
+        })
+        bind('.todo', () => {
+            launchPopup();
         })
         bind('.mainContainer .modalContainer .modalButtonContainer .modalButton', () => {
-            $('.overlay').hide();
-            $('.modalContainer').hide();
-            $('.modalContainer .modalContent').empty();
+            hidePopup();
         })
-        bind('.mainContainer .topBar .bell', () => {
-            console.log('tapped');
-            let count = $('.count').text().trim();
-            $('.count').empty();
-            $('.notificationTab .header .count').append(count);
-            $('.notificationTab').toggle();
-            
+        bind('.contentAdd', (ui) => {
+            let content = $('.modalContent')
+                .val()
+                .trim();
+            hidePopup();
+            $('#todo').append('<div class="card"><div class="content">' + content + '</div><img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCar' +
+                    'd" class="removeCard"></div>')
+
         })
     })
 
-function launchPopup(text) {
+function launchPopup() {
     $('.overlay').show();
-    $('.modalContainer .modalContent').append(text);
     $('.modalContainer').show();
+}
+function hidePopup() {
+    $('.overlay').hide();
+    $('.modalContainer').hide();
+    $('.modalContainer .modalContent').val('');
 }
