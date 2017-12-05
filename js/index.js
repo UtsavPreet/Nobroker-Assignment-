@@ -1,3 +1,4 @@
+let dataID;
 $(document)
     .ready(function () {
         let progress = document.getElementById("progress");
@@ -33,34 +34,37 @@ $(document)
                     .removeChild(el);
             }
         });
-        bind('.done', () => {
-            launchPopup();
-        })
-        bind('.progress', () => {
-            let content = launchPopup();
-
-        })
-        bind('.todo', () => {
-            launchPopup();
-        })
         bind('.mainContainer .modalContainer .modalButtonContainer .modalButton', () => {
             hidePopup();
         })
-        bind('.contentAdd', (ui) => {
+        bind('.contentAdd', () => {
             let content = $('.modalContent')
                 .val()
                 .trim();
             hidePopup();
-            $('#todo').append('<div class="card"><div class="content">' + content + '</div><img src="http://moziru.com/images/red-cross-clipart-3.png" alt="removeCar' +
-                    'd" class="removeCard"></div>')
+            switch (dataID) {
+                case 'todo':
+                    $('#todo').append('<div class="card"><div class="content">' + content + '</div><img src="../images/delete-button.svg" alt="removeCar' +
+                        'd" class="removeCard"></div>')
+                    break;
+                case 'progress':
+                    $('#progress').append('<div class="card"><div class="content">' + content + '</div><img src="../images/delete-button.svg" alt="removeCar' +
+                        'd" class="removeCard"></div>')
+                    break;
+                case 'done':
+                    $('#done').append('<div class="card"><div class="content">' + content + '</div><img src="../images/delete-button.svg" alt="removeCar' +
+                        'd" class="removeCard"></div>')
+            }
 
         })
     })
 
-function launchPopup() {
+function launchPopup(targetElement) {
+    dataID = $(targetElement).data("id")
     $('.overlay').show();
     $('.modalContainer').show();
 }
+
 function hidePopup() {
     $('.overlay').hide();
     $('.modalContainer').hide();

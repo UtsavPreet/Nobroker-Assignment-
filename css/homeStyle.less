@@ -1,10 +1,10 @@
 @fontNormal: 1.4rem;
 @fontHeading: 1.8rem;
 @primaryWhite: #F9FAFD;
-@cardBg: #D4DAE2;
-@mainBg: #6576A5;
-@textColor: #8C95A4;
-@buttonPrimary: #4B5070;
+@cardBg: #F9FBFD;
+@mainBg: #DBE5F2;
+@textColor: #424242;
+@buttonPrimary: #3E9AFD;
 * {
     margin: 0;
     padding: 0;
@@ -134,7 +134,7 @@ body.dragging {
                 font-weight: 500;
                 text-transform: uppercase;
                 padding: 1rem 0;
-                color: whitesmoke;
+                color: #01579b;
                 letter-spacing: 3px;
             }
             .cardContainer {
@@ -143,11 +143,11 @@ body.dragging {
                 bottom: 5rem;
                 width: 100%;
                 overflow-y: auto;
-                border: 2px dotted whitesmoke;
+                border: 1px solid #01579b;
                 box-sizing: border-box;
                 .card {
                     position: relative;
-                    min-height: 10rem;
+                    min-height: 14rem;
                     max-height: 30rem;
                     overflow-y: auto;
                     margin: 1rem;
@@ -165,8 +165,9 @@ body.dragging {
                     .removeCard {
                         position: relative;
                         float: right;
-                        height: 2rem;
-                        margin: 3rem;
+                        height: 3rem;
+                        margin-top: 5rem;
+                        margin-right: 2rem;
                         display: none;
                     }
                     &:hover {

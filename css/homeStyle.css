@@ -23,8 +23,8 @@ body.dragging {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  background: #6576A5;
-  color: #8C95A4;
+  background: #DBE5F2;
+  color: #424242;
 }
 .mainContainer .topBar {
   position: absolute;
@@ -124,7 +124,7 @@ body.dragging {
   font-weight: 500;
   text-transform: uppercase;
   padding: 1rem 0;
-  color: whitesmoke;
+  color: #01579b;
   letter-spacing: 3px;
 }
 .mainContainer .todoContainer .column .cardContainer {
@@ -133,16 +133,16 @@ body.dragging {
   bottom: 5rem;
   width: 100%;
   overflow-y: auto;
-  border: 2px dotted whitesmoke;
+  border: 1px solid #01579b;
   box-sizing: border-box;
 }
 .mainContainer .todoContainer .column .cardContainer .card {
   position: relative;
-  min-height: 10rem;
+  min-height: 14rem;
   max-height: 30rem;
   overflow-y: auto;
   margin: 1rem;
-  background: #D4DAE2;
+  background: #F9FBFD;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
@@ -157,8 +157,9 @@ body.dragging {
 .mainContainer .todoContainer .column .cardContainer .card .removeCard {
   position: relative;
   float: right;
-  height: 2rem;
-  margin: 3rem;
+  height: 3rem;
+  margin-top: 5rem;
+  margin-right: 2rem;
   display: none;
 }
 .mainContainer .todoContainer .column .cardContainer .card:hover .removeCard {
@@ -169,7 +170,7 @@ body.dragging {
   bottom: 0;
   height: 5rem;
   width: 100%;
-  background: #4B5070;
+  background: #3E9AFD;
   color: whitesmoke;
   text-transform: uppercase;
   font-size: 1.8rem;
