@@ -133,7 +133,6 @@ body.dragging {
   bottom: 5rem;
   width: 100%;
   overflow-y: auto;
-  border: 1px solid #01579b;
   box-sizing: border-box;
 }
 .mainContainer .todoContainer .column .cardContainer .card {
@@ -164,6 +163,9 @@ body.dragging {
 }
 .mainContainer .todoContainer .column .cardContainer .card:hover .removeCard {
   display: block;
+}
+.mainContainer .todoContainer .column .cardContainer .over {
+  border: 2px dashed #01579b;
 }
 .mainContainer .todoContainer .column .addCardButton {
   position: absolute;
